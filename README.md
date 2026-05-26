@@ -1,11 +1,15 @@
-<div align="center">
+# Multiplication Blitz
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+A fast, kid-friendly multiplication practice game.
 
-  <h1>Built with AI Studio</h2>
+Production: https://helloricky.github.io/multiplication-blitz/
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+## Local preview
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+Open `index.html` in a browser, or run:
 
-</div>
+```bash
+python3 -m http.server 8000
+```
+
+Then visit http://localhost:8000.
