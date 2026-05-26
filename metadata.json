@@ -1,0 +1,6 @@
+{
+  "name": "Multiplication Speed Test",
+  "description": "An interactive, super fun multiplication speed test game for kids with multiple choice popups, badges, streaks, and sound effects.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

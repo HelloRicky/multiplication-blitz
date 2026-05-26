@@ -1,15 +1,20 @@
-# Multiplication Blitz
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
+</div>
 
-A fast, kid-friendly multiplication practice game.
+# Run and deploy your AI Studio app
 
-Production: https://helloricky.github.io/multiplication-blitz/
+This contains everything you need to run your app locally.
 
-## Local preview
+View your app in AI Studio: https://ai.studio/apps/41b9c7a1-fcd9-42e7-a38f-df5d3708e7aa
 
-Open `index.html` in a browser, or run:
+## Run Locally
 
-```bash
-python3 -m http.server 8000
-```
+**Prerequisites:**  Node.js
 
-Then visit http://localhost:8000.
+
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`
