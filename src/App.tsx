@@ -32,7 +32,7 @@ export default function App() {
 
   // Active game settings
   const [activeNumbers, setActiveNumbers] = useState<number[]>([1, 2, 3, 4, 5, 10]);
-  const [activeMode, setActiveMode] = useState<GameMode>('time-attack');
+  const [activeMode, setActiveMode] = useState<GameMode>('sprint');
 
   // Game over stats results and new achievements state
   const [lastStats, setLastStats] = useState<{
@@ -206,7 +206,7 @@ export default function App() {
   };
 
   return (
-    <div id="app-root-wrapper" className="min-h-screen bg-[#4F46E5] text-white flex flex-col justify-between py-6 px-4 md:px-8 transition-colors duration-300">
+    <div id="app-root-wrapper" className="min-h-screen bg-[#4F46E5] text-white flex flex-col justify-between py-3 px-3 md:px-6 transition-colors duration-300">
       {/* Absolute canvas confetti element */}
       <ConfettiEffect trigger={confettiTrigger} />
 
@@ -217,31 +217,31 @@ export default function App() {
       />
 
       {/* Main Container */}
-      <div className="w-full max-w-5xl mx-auto space-y-6 flex-1">
+      <div className="w-full max-w-5xl mx-auto space-y-3 flex-1">
         {/* Playful Top Ribbon with Logo & Controls */}
-        <header className="flex flex-col sm:flex-row items-center justify-between gap-4 pb-4 border-b border-white/20">
-          <div className="flex items-center gap-2.5 cursor-pointer" onClick={() => { playPop(); setView('lobby'); }}>
-            <div className="w-10 h-10 rounded-full bg-white text-[#4F46E5] flex items-center justify-center font-black text-2xl shadow-lg border-2 border-white transform hover:rotate-12 transition-transform">
+        <header className="flex items-center justify-between gap-3 pb-2 border-b border-white/15">
+          <div className="flex items-center gap-2 cursor-pointer min-w-0" onClick={() => { playPop(); setView('lobby'); }}>
+            <div className="w-8 h-8 rounded-full bg-white text-[#4F46E5] flex items-center justify-center font-black text-xl shadow border-2 border-white transform hover:rotate-12 transition-transform shrink-0">
               ×
             </div>
-            <div>
-              <h1 className="text-2xl font-black tracking-tight text-white leading-none">Multiplication Blitz</h1>
-              <span className="text-[10px] uppercase font-extrabold text-amber-300 tracking-wider block mt-1">Speed math for superstars</span>
+            <div className="min-w-0">
+              <h1 className="text-lg sm:text-xl font-black tracking-tight text-white leading-none truncate">Multiplication Blitz</h1>
+              <span className="hidden sm:block text-[9px] uppercase font-extrabold text-amber-300 tracking-wider mt-0.5">Speed math for superstars</span>
             </div>
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 shrink-0">
             <AudioToggle />
-            <span className="text-xs bg-white/15 backdrop-blur-md rounded-full px-3.5 py-1.5 font-bold text-white border border-white/10 font-mono">
+            <span className="hidden sm:inline-flex text-[10px] bg-white/15 backdrop-blur-md rounded-full px-2.5 py-1 font-bold text-white border border-white/10 font-mono">
               ⚡ Sandbox Mode
             </span>
           </div>
         </header>
 
         {/* Dynamic Views renderer */}
-        <main className="py-4">
+        <main className="py-2">
           {view === 'lobby' && (
-            <div className="space-y-8 animate-scaleIn">
+            <div className="space-y-5 animate-scaleIn">
               {/* Core interactive customized dashboard panel */}
               <Dashboard
                 currentMascot={currentMascot}
@@ -288,7 +288,7 @@ export default function App() {
       </div>
 
       {/* Fun Kid-friendly Footer */}
-      <footer className="w-full max-w-5xl mx-auto text-center pt-8 border-t border-white/15 text-xs text-indigo-100/80">
+      <footer className="w-full max-w-5xl mx-auto text-center pt-4 border-t border-white/15 text-xs text-indigo-100/80">
         <p className="font-extrabold tracking-wide uppercase text-amber-300">
           ★ Multiplication Speed Test Sandbox ★
         </p>
